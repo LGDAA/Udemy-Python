@@ -1,0 +1,42 @@
+import random
+cpf_enviado = ''
+for i in range(9):
+    cpf_enviado += str(random.randint(0, 9))
+
+contador_regressivo = 10
+resultado = 0
+
+for cada_digito in cpf_enviado:
+    resultado += int(cada_digito) * contador_regressivo
+    contador_regressivo -= 1
+# print(f'O resultado da soma dos digitos multiplicados pela contagem regressiva é de {resultado}')
+multiplicacao_soma_digitos = resultado * 10
+resto_soma_digitos = multiplicacao_soma_digitos % 11
+if resto_soma_digitos <= 9:
+    primeiro_digito = resto_soma_digitos
+else:
+    primeiro_digito = 0
+
+# print(f'O primeiro dígito do CPF é {primeiro_digito}')
+
+dez_digitos = cpf_enviado + str(primeiro_digito)
+contador_regressivo_SD = 11
+resultado_dez_digitos = 0
+
+for digito in dez_digitos:
+    int(digito) 
+    resultado_dez_digitos += int(digito) * contador_regressivo_SD
+    contador_regressivo_SD -= 1
+# print(f'O resultado da soma dos digitos multiplicados pela contagem regressiva é de {resultado_dez_digitos}')
+multiplicacao_soma_dez_digitos = resultado_dez_digitos * 10
+resto_soma_dez_digitos = multiplicacao_soma_dez_digitos % 11
+if resto_soma_dez_digitos <= 9:
+    segundo_digito = resto_soma_dez_digitos
+else:
+    segundo_digito = 0
+
+# print(f'O segundo dígito do CPF é {segundo_digito}')
+
+cpf = cpf_enviado + str(primeiro_digito) + str(segundo_digito)
+print(cpf)
+
