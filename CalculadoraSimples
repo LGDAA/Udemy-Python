@@ -1,0 +1,43 @@
+"""
+Exercício calculadora simples com while
+"""
+
+while True:
+    sair = input('Quer sair? [s]im: ').lower().startswith('s')
+
+    if sair is True:
+        break
+    else:
+      operacao = input("Qual operação você deseja realizar: ")
+      if operacao == "+" or operacao =='adicao' or operacao == 'adição':
+        print("A operação escolhida foi adição.")
+        num1 = input("Escreva o primeiro número para adição: ")
+        num2 = input("Escreva o segundo número para adição: ")
+        if num1.isdigit() and num2.isdigit():
+          resultado = int(num1) + int(num2)
+          print(resultado)
+      elif operacao == "-" or operacao == "subtracao" or operacao == "subtração":
+        print("A operação escolhida foi subtração.")
+        num1 = input("Escreva o primeiro número para subtração: ")
+        num2 = input("Escreva o segundo número para subtração: ")
+        if num1.isdigit() and num2.isdigit():
+          resultado = int(num1) - int(num2)
+          print(resultado)
+      elif operacao == "*" or operacao == "multiplicacao" or operacao == "multiplicação":
+        print("A operação escolhida foi multiplicação.")
+        num1 = input("Escreva o primeiro número para multiplicação: ")
+        num2 = input("Escreva o segundo número para multiplicação: ")
+        if num1.isdigit() and num2.isdigit():
+          resultado = int(num1) * int(num2)
+          print(resultado)
+      elif operacao == "/" or operacao == "divisao" or operacao == "divisão":
+        print("A operação escolhida foi divisão.")
+        num1 = input("Escreva o primeiro número para divisão: ")
+        num2 = input("Escreva o segundo número para divisão: ")
+        if num1.isdigit() and num2.isdigit():
+          resultado = int(num1) / int(num2)
+          print(resultado)
+      else:
+        print("Esse operador é inválido")
+
+
