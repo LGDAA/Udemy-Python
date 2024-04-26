@@ -1,0 +1,23 @@
+frase = 'Qual letra apareceu mais vezes na string'
+
+i = 0
+qtd_vezes = 0
+letra_apareceu_mais_vezes = ''
+tamanho_frase = len(frase)
+
+while i < tamanho_frase:
+  letra_atual = frase[i]
+  i += 1
+  if letra_atual == ' ':
+    continue
+  else:
+    qtd_vezes_atual = frase.count(letra_atual)
+
+  if qtd_vezes < qtd_vezes_atual:
+    qtd_vezes = qtd_vezes_atual
+    letra_apareceu_mais_vezes = letra_atual
+
+  i += 1
+
+print(f"A letra que apareceu mais vezes foi {letra_apareceu_mais_vezes}, aparecendo {qtd_vezes}x")
+
