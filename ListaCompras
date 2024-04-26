@@ -1,0 +1,47 @@
+lista_compras = []
+
+while True:
+  print("Selecione uma opção para realizar na lista")
+  opcao = input("[i]nserir [a]pagar [l]istar [s]air. ")
+  if opcao == 'i' or opcao =='I' or opcao == 'inserir' or opcao == 'INSERIR' or opcao == 'Inserir':
+    item_inserido = input('Digite o item a ser inserido: ')
+    lista_compras.append(item_inserido)
+    print('-' * 10 + '/' + '-' * 10 )
+    print('\n')
+    continue
+
+  if opcao == 'a' or opcao =='A' or opcao == 'Apagar' or opcao == 'APAGAR' or opcao == 'apagar':
+    for indice, valor in enumerate(lista_compras):
+      print(f'{indice} {valor}')
+    indice_item_apagado = int(input('digite o indice do item a ser apagado: '))
+    if len(lista_compras) < indice_item_apagado:
+      print('Não foi possível excluir esse índice.')
+      print('-' * 10 + '/' + '-' * 10 )
+      print('\n')
+      continue
+    else:
+      del lista_compras[indice_item_apagado]
+      continue
+
+  elif opcao == 'l' or opcao =='L' or opcao == 'listar' or opcao == 'LISTAR' or opcao == 'Listar':
+    if lista_compras == []:
+      print("não há nada na lista")
+      print('-' * 10 + '/' + '-' * 10 )
+      print('\n')
+      continue
+
+    else:
+      for indice, valor in enumerate(lista_compras):
+        print(f'{indice} {valor}')
+    print('\n')
+    continue
+
+  elif opcao == 'sair' or opcao == 'SAIR' or opcao == 's' or opcao == 'S':
+    print('-' * 10 + '/' + '-' * 10 )
+    print("Você saiu da aplicação")
+    break
+
+  else:
+    print("Por favor escolha as opções disponíveis.")
+    print("\n")
+    continue
